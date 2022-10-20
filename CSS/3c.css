@@ -1,0 +1,386 @@
+/* 排行榜模块start */
+a {
+    color: black;
+}
+#rank-main {
+    
+     width: 100% !important;
+    border: 1px solid #f1f5f7;
+    height: 2000px;
+    background-color: #fafafa;
+    margin-top: 20px;
+  
+}
+.rank-main-left {
+    
+    float: left;
+   
+    width: 370px;
+    margin-left: 140px;
+}
+.rank-main-left ul {
+    margin-top: 73px;
+    margin-left:60px ;
+  width: 211px;
+  border: 1px solid #e4e4e4;
+}
+#left-first {
+    cursor: default;
+    padding-top: 21px;
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: 540;
+}
+  #left-first span{
+    display: inline-block;
+   
+    width: 148px;
+   border-bottom: 1px solid #e4e4e4;
+   
+}
+.rank-main-left ul li {
+    cursor: pointer;
+    font-size: 14px;
+   height: 40px;
+   padding: 8px;
+   line-height: 40px;
+    /* background-color: aquamarine; */
+    padding-left: 18px;
+}
+
+.selected {
+    background-color:#31c27c !important ;
+   
+}
+.w-selected {
+    color: #fff !important;
+}
+
+.rank-main-right {
+    
+    float: left;
+    width: 1000px;
+    height: 500px;
+   
+    margin-left: -61px;
+    margin-top: 100px;
+}
+.rank-title {
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+.rank-title h4 {
+    float: left;
+    width: 127px;
+    font-weight: 400;
+    font-size: 25px;
+    margin-right: 15px;
+}
+#current-time {
+   font-size: 14px;
+    color: #515151;
+}
+#rule {
+    cursor: pointer;
+    width: 64px;
+    height: 21px;
+    font-size: 14px;
+    margin-left:15px;
+    
+}
+#rule:hover {
+    color: #31c27c;
+}
+.btn>div {
+    position: relative;
+    height:25px;
+    line-height: 25px;
+    margin-left: 20px;
+    margin-right: -10px;
+    float: left;  
+    padding: 9px 32px;
+    border: 1px solid #c9c9c9;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    
+}
+.btn .first {
+    background-color: #31c27c;
+    color: #fff;
+    border-color: #31c27c;
+}
+.btn span {
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    top:50%;
+    margin-top: -16px;
+    width: 32px;
+    height: 32px;
+    zoom: .5;
+    background: url(../img/searc.png) no-repeat;
+ 
+}
+.btn .playa:hover {
+ opacity: .6;
+ filter: alpha(opacity=60);
+ 
+}
+.btn .play {
+    background-position:-155px -440px ;    
+}
+.btn .add {
+    background-position:-39px 0px ;
+}
+.btn .download {
+    background-position:-79px -439px ;
+}
+.btn .operate {
+    background-position:-240px -3px ;
+}
+.btn .comment {
+    background-position:-281px -239px ;
+
+}
+
+.playa>span {
+    margin-left: 25px;
+}
+
+.btn #text {
+    position:relative ;
+    display: inline-block;
+    margin-left:12px;
+
+}
+
+.song-title {
+    margin-top: 30px;
+}
+.song-title span {
+    display: inline-block;
+    font-size: 14px;
+    color: #999999;
+}
+.song-title .song {
+    margin-left: 169px;
+    width: 450px;
+    height: 50px;
+}
+.song-title .singer {
+    width: 197px;
+    height: 50px;
+}
+#song {
+    margin-left: 60px;
+    margin-top: -20px;
+}
+
+#song li {
+    position: relative;
+    width: 910px;
+    height: 100px;
+    background-color: #fff;
+    /* margin-top: -30px; */
+    margin-left: -38px;
+    margin-bottom: 7px;
+}
+#song li:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.hot {
+    color: #ff4222;
+   
+}
+.songlist-number {
+    font-family: '幼圆';
+    float: left;
+    width: 13px;
+    font-size: 25px;
+    margin-left: 26px;
+    margin-top: 41px;
+   
+}
+.songlist-rank {
+    position: relative;
+    width: 21px;
+   float: left;
+   margin-left: 38px;
+   margin-top: 56px;
+   font-size: 13px;
+   color: #999999;
+}
+.songlist-rank span {
+    position: absolute;
+    top:-32px;
+    left: 15px;
+    display:inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(../img/icon_rank.png);
+    zoom: .5;
+    background-position: 0 40px;
+}
+.songname-title {
+    position: relative;
+    display: inline-block;
+    margin-top: 17px;
+    height: 70px;
+    margin-left: 40px;
+}
+.songname-title a {
+   
+    display: inline-block;
+    width: 100px;
+    white-space: nowrap;
+    position: absolute;
+    font-size: 14px;
+    top:27px;
+    left: 89px;   
+}
+.songname-title a:hover {
+    color: #31c27c;
+}
+
+
+.songname-title img {
+    width: 70px;
+    height: 70px;
+}
+.songname {
+    position: relative;
+    width: 400px;
+    left: 10px;
+}
+.songname .mv {
+    
+    margin-left: 278px;
+    margin-bottom: 46px;
+    display: inline-block;
+    height: 36px;
+    width: 66px;
+    background: url(../img/searc.png);
+    background-position: 320px 114px;
+    zoom: .5;
+    
+}
+#author {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    left:604px;
+    top: 41px;
+    font-size: 14px;
+}
+#author span:hover {
+    color: #31c27c;
+}
+#time {
+    position: absolute;
+    top:39px;
+    width: 60px;
+    right:43px;
+    font-size: 14px;
+    color: #999999;
+}
+#menu {
+    position: absolute;
+    top:21px;
+    right: 308px;
+    width: 100px;
+    height: 60px;
+    /* background-color: #31c27c; */
+    display: none;
+
+}
+#menu .m-play,.m-add {
+    display: inline-block;
+    width: 78px;
+    height: 78px;
+    margin-top: 20px;
+    background: url(../img/icon_menu.png) no-repeat;
+    zoom: .5;
+}
+#menu .m-play {
+    background-position: 6px 4px;
+}
+
+#menu .m-add {
+    background-position: 6px -156px;
+ 
+}
+
+/* 排行榜模块end  */
+
+/* 评论模块 */
+.pl {
+    position: relative;
+    width: 901px;
+    height: 300px;
+    /* background-color: red; */
+    margin-top: 100px;
+    margin-left: 471px;
+}
+.pl h4 {
+    float: left;
+    font-weight: 500;
+    width: 50px;
+}
+.pl h5 {
+    float: left;
+   width: 120px;
+   font-weight: 400;
+   font-size: 13px;
+   line-height: 32px;
+   color:gray
+}
+.pl textarea {
+    padding: 8px;
+    width: 884px;
+    height: 107px;
+    resize: none;
+    border-radius: 1px;
+    outline: none;
+    line-height: 1.5;
+    border-color: #ececec;
+    background-color: #f5f5f5;
+}
+.pl>i{
+    position: absolute;
+    right: 133px;
+    bottom: 173px;
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    background: url(../img/comment.png);
+    zoom: .6;
+}
+.pl input {
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    background-color: #31c27c;
+    color: #fff;
+    float: right;
+    margin-top: 5px;
+}
+.pl span {
+    position: absolute;
+    right: 15px;
+    top:130px;
+    font-size: 14px;
+    color: #999999;
+}
+.pl span i {
+    font-style: normal;
+    color: #31c27c;
+}
+/* 评论模块 */
+

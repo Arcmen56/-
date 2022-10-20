@@ -1,0 +1,147 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: url("../img/bqb.jpg")  no-repeat;
+  background-size: cover;
+}
+li{
+  list-style: none;
+  float: left;
+  text-align: center;
+  padding: 0px 20px;
+  cursor: pointer;
+}
+.ull{
+  /* width: 160px; */
+  height: 50px;
+  margin: auto;
+}
+.ull ul {
+  margin-left: 79px;
+}
+.ull li{
+  text-align: center;
+}
+.d1 {
+  font-size: 14px;
+  line-height: 31px;
+}
+.d1>.username{
+  position: absolute;
+  outline:none;
+   left: 54px;
+   width: 211px;
+  /* background-color: red; */
+}
+.d1>.password {
+  position: absolute;
+  outline:none;
+  left: 54px;
+  top:105px;
+  width: 211px;
+  /* background-color: red; */
+}
+.usernameX,.passwordX,.phoneX,.addressX {
+   outline:none;
+  position: absolute;
+  width: 205px; 
+ /* background-color: rebeccapurple; */
+ left: 58px;
+
+}
+/* .usernameX {
+  left:10px
+} */
+#box{
+  width: 750px;
+  height: 390px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 150px auto 0 auto;
+  box-shadow: 0 0 10px  rgba(0, 0, 0, .2);
+  opacity: 0.98;
+  position: relative;
+}
+#left{
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-left: 80px;
+  margin-top: 30px;
+  border-right: 1px solid #e7e7e7;
+}
+#left p{
+  margin-bottom: 20px;
+}
+#right{
+  width: 300px;
+  height: 250px;
+  float: left;
+  position: relative;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+.zhuce {
+  height: 150px
+}
+.zhuce .d1 {
+  margin-bottom: 5px;
+}
+/* .denglu{
+
+} */
+.denglu input,.zhuce input{
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+ 
+}
+.btn,.btnX{
+  margin-left: 60px;
+  cursor: pointer;
+  background-color: #00a1d6;
+  color: #fff;
+}
+.d1{
+  width: 280px;
+  height: 30px;
+  margin-left: -8px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid #e7e7e7;
+}
+span{
+  font-size: 10px;
+}
+.qita{
+  margin-left: 100px;
+  margin-top: 5px;
+  width: 120px;
+  height: 22px;
+}
+.qita1{
+  margin-left: 15px;
+}
+.qita{
+  font-size: 14px;
+  color: #C9CCD0;
+}
+.qita1 img{
+  margin-top: 15px;
+
+}
+.qita1 {
+
+  margin-top: 68px;
+
+}
+.qita1 span {
+ text-align: center;
+  margin-bottom: 10px;
+  height: 16px;
+  width: 48px;
+  
+}

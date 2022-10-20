@@ -1,0 +1,274 @@
+
+.alb-banner {
+    position: relative;
+    margin-top: -24px;
+    height: 349px;
+    width: 100%;
+    overflow: hidden;
+  /* background-color: aqua; */
+ 
+}
+.alb-sub-banner {
+   position: absolute;
+   width: 900px; 
+     height: 300px;
+    left: 44%;
+    top: 25px;
+    margin-left: -365px;
+    overflow: hidden;
+    
+
+}
+.alp {
+   
+    width: 900px; 
+     height:330px;
+}
+.u1>.sub-banner-l1 {
+    
+
+    float: left;
+   
+    height: 465px;
+}
+
+.u1 {
+    position: absolute;
+    width: 1000%;
+}
+ .u2 {
+    position: absolute;
+    bottom: 0px;
+    /*left走50% 父容器宽度的一半*/
+    left: 50%;
+    /*margin 负值 往左走自己盒子宽度的一半*/
+    margin-left: -44px;
+
+}
+
+.u2 li {
+   
+    float: left;
+    cursor: pointer;
+    margin-right: 20px;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #fff;
+    border-color: hsla(0,0%,100%.3) ;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+.l2-cs {
+  background-color: rgba(255, 251, 251, 0.7) !important;
+   border-color:rgba(0,0,0,.4) !important;
+}
+.prve , .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    color: black;
+    font-size: 80px;
+    font-weight: 400;
+    margin-top: -68px;
+    height: 130px;
+    width:85px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition-property:background-color ;
+    transition-duration:0.5s;/* 过渡效果 */
+    text-align: center;
+ 
+}
+.prve:hover{
+    background-color: rgba(0, 0, 0, .16);
+
+}
+.next:hover{
+    background-color: rgba(0, 0, 0, .16);
+
+}
+
+.prve {
+  
+    left: -85px;
+    
+}
+.prve span {
+    margin-top: 50%;
+    margin-left: -22%;
+    display: inline-block;
+     width: 131px;
+     height: 159px;
+    background-image: url(../img/箭头2.png);
+    background-position: -25px -20px;
+    zoom: .3;
+    
+  
+   
+}
+
+.next {
+    right:-85px ;
+    
+
+
+}
+.next span {
+    margin-top: 50%;
+    margin-left: -22%;
+    display: inline-block;
+     width: 131px;
+     height: 159px;
+    background-image: url(../img/箭头1.png);
+    background-position: -25px -20px;
+    zoom: .3;
+    
+}
+/* 最新上架start */
+.new-album {
+    margin-top: 45px;
+    height: 368px;
+
+}
+.new-album h2 {
+    height: 58px;
+    font-size: 24px;
+    line-height: 58px;
+    font-weight: 400;
+    font-family: '幼圆';
+}
+.new-album li {
+    width:210px;
+    height: 275px;
+    position: relative;
+    float: left;
+    margin-right: 30px;
+    /* overflow: hidden; */
+
+}
+.cover-box {
+  
+    height: 220px;  
+    width: 220px;
+    overflow: hidden;
+}
+.cover-box span {
+    position: absolute;
+    top:106px;;
+    left: 106px;
+    height: 130px;
+    width: 130px;
+     background:url(../img/paly.png) no-repeat;
+    cursor: pointer;
+     background-position: -5px -6px;
+     zoom: .6;
+     display: none;
+ 
+  
+}
+#cover-img  {
+    transition: all .5s;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#cover-img:hover {
+    transform: scale(1.05);
+   
+}
+.album-cover {
+    height: 275px;    
+}
+.album-cover>a {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 14px;
+    color: black;
+}
+.album-cover>a:hover {
+    color: #31c2a5;
+}
+.purchase {
+    margin-top: 5px;
+    font-size: 14px;
+    color: grey;
+}
+.purchase button {
+    height: 28px;
+    width: 82px;
+    cursor: pointer;
+    margin-right: 10px;
+    float: right;
+    background-color: rgb(255, 254, 254);
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    color: #000;
+}
+.purchase button:hover{
+    background-color: #ededed;
+}
+/* 最新上架end */
+.rank ul {
+    height: 550px;
+    margin: 40px auto;
+    margin-left: 500px;
+    
+}
+.rank li {  
+    position: relative;
+    float: left;
+    height: 500px;
+    margin-right: 10px;
+   
+}
+.rank h3 {
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 200px;
+   
+}
+.rank .more {
+    display: inline-block;
+   font-size: 16px;
+    width: 50px;
+    height: 40px;
+    float: right;
+    margin-right: 200px;
+    margin-top: 10px;
+}
+.rank {
+    padding-top: 40px;
+    text-align: center;
+    border: 1px solid #f1f5f7;
+    height: 700px;
+    width: 100%;
+
+    background-color: #f3f3f3;
+}
+.rank li .big {
+   display: none;
+    width: 224px;
+    height: 500px;
+    
+    border-radius: 3px;
+}
+.rank .hsong .big {
+    display: block;
+    
+}
+.rank .hsong .small {
+    display: none;
+    
+}
+.rank li .small {
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width: 50px;
+    height: 500px;
+    border-radius: 3px;
+   
+}
