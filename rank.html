@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>排行榜</title>
+    <link rel="icon" href="img/音乐.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/1c.css" />
+    <link rel="stylesheet" href="CSS/3c.css" />
+    <script src="JS/jquery-3.6.0.js"></script>
+    <script src="JS/ejs2.js"></script>
+    <script src="JS/love.js"></script>
+    <script src="JS/vue.js"></script>
+    <script src="JS/rank.js"></script>
+  </head>
+  <body>
+    <!--头部模块s-->
+    <div class="h">
+      <div class="nav">
+        <img src="img/logo.png" alt="" class="l1" />
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="rank.html">排行榜</a></li>
+          <li><a href="#">歌迷相关</a></li>
+        </ul>
+        <div class="search">
+          <input type="text" value="输入关键词" />
+          <button class="search-button"></button>
+          <div class="slist">
+            <ol>
+                <li>
+                <a href="" class="number">1</a>
+                 淘汰
+                 <span> 99.9万</span>               
+                </li>
+                <li>
+                  <a href="" class="number">2</a>
+                   单车
+                   <span> 88.8万</span> 
+                 
+                  </li>
+                  <li>
+                      <a href="" class="number">3</a>
+                    十年
+                       <span> 77.7万</span> 
+                     
+                      </li>
+                      <li>
+                          <a href="" class="number">4</a>
+                           阴天快乐
+                           <span> 66.6万</span> 
+                         
+                          </li>
+                          <li>
+                              <a href="" class="number">5</a>
+                               白玫瑰
+                               <span> 55.5万</span> 
+                             
+                              </li>
+            </ol>
+           </div>
+        </div>
+      </div>
+      <div class="user">
+        <img src="img/head.jpg" alt="" />
+        <span class="un">Ht-1874</span>
+        <img id="login" src="img/login_qq.png" alt="" />
+      </div>
+      <!-- 登出模块start -->
+      <div class="logout">
+        <img id="logout-img" src="img/head.jpg" alt="" />
+        <img id="login" src="img/login_qq.png" alt="" />
+        <img class="level" src="img/svip6.png" alt="" />
+        <img class="level2" src="img/sui6.png" alt="" />
+        <span>Ht-1874</span>
+        <div>
+          <h4>绿钻豪华版</h4>
+          <button class="btn">续费</button>
+        </div>
+        <p>2060-3-23 到期</p>
+        <a href="login.html" id="lout"> <h4>退出登录</h4></a>
+        <!-- 登出模块end -->
+    </div>
+  </div>
+    <!--头部模块e-->
+
+    <!-- 排行榜模块start -->
+    <div id="rank-main">
+      <div class="rank-main-left">
+        <ul>
+          <li id="left-first"><span>巅峰榜</span></li>
+          <li class="left-li"><a href="javascript:void(0)">飙升榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">热歌榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">新歌榜 </a></li>
+          <li class="left-li selected">
+            <a href="#" class="w-selected">流行指数榜</a>
+          </li>
+          <li class="left-li"><a href="javascript:void(0)">MV榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">听歌识曲榜</a></li>
+          <li id="left-first"><span>地区榜</span></li>
+          <li class="left-li"><a href="javascript:void(0)">内地榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">香港地区榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">台湾地区榜</a></li>
+          <li class="left-li"><a href="javascript:void(0)">欧美榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">韩国榜</a></li>
+          <li id="left-first"><span>特色榜</span></li>
+          <li class="left-li"><a href="javascript:void(0)">网络歌曲榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">抖快榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">综艺新歌榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">影视金曲榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">动漫音乐榜</a></li>
+          <li id="left-first"><span>全球榜</span></li>
+          <li class="left-li"><a href="javascript:void(0)">美国公告牌榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">美国热门音乐榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">韩国Melon榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">英国UK榜 </a></li>
+          <li class="left-li"><a href="javascript:void(0)">日本公信榜</a></li>
+        </ul>
+      </div>
+      <div class="rank-main-right">
+        <div class="rank-title">
+          <h4>流行指数榜</h4>
+          <span id="current-time"></span>
+          <span id="rule">榜单规则</span>
+        </div>
+        <div class="btn">
+            <div class="playa first ">
+                <span class="icon play"></span>
+                <div id="text">播放全部</div>
+            </div>
+            <div class="playa">
+              <span class="icon add"></span>
+                <div id="text">添加到</div>
+            </div>
+            <div class="playa">
+              <span class="icon download"></span>
+              <div id="text">下载</div>
+            </div>
+            <div class="playa">
+              <span class="icon operate"></span>
+              <div id="text">  批量操作</div>
+            </div>
+            <div class="playa">
+              <span class="icon comment"></span>
+              <div id="text">评论(999999)</div>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="song-list">
+            <div class="song-title">
+                <span class="song">歌曲</span>
+                <span class="singer">歌手</span>
+                <span class="timmer">时长</span>
+            </div>
+          <ul id="song">
+              <li>
+              <div class="songlist-number hot"></div>
+              <div class="songlist-rank">
+                <span></span>
+                <p> 151%</p>
+              </div>
+              <div class="songname">
+                <span class="songname-title">
+                  <img src="img/12.jpg" alt="">
+                  <a href="">单车</a>
+                </span>
+                <span class="icon">
+                 <a href="" class="mv"></a>
+                 <a href=""></a>
+                </span>
+              </div> 
+              <div id="menu">
+                <a href="player.html" class="m-play">
+                </a>
+                <a href="" class="m-add"></a>
+              </div>
+              <div id="author">
+               <span>陈奕迅</span>
+              </div>
+              <div id="time">
+                03:31
+              </div>
+              </li>
+              <li>
+      <div class="songlist-number hot"></div>
+      <div class="songlist-rank">
+        <span></span>
+        <p> 151%</p>
+       
+      </div>
+      <div class="songname">
+        <span class="songname-title">
+          <img src="img/12.jpg" alt="">
+          <a href="">单车</a>
+        </span>
+        <span class="icon">
+         <a href="" class="mv"></a>
+         <a href=""></a>
+        </span>
+       
+      </div>
+      <div id="menu"> 
+        <a href="" class="m-play">
+         
+        </a>
+        <a href="" class="m-add"></a>
+      </div>
+      <div id="author">
+       <span>陈奕迅</span>
+      </div>
+      <div id="time">
+        03:15
+      </div>
+      </li>
+      <li>
+        <div class="songlist-number hot" ></div>
+        <div class="songlist-rank">
+          <span></span>
+          <p> 151%</p>
+         
+        </div>
+        <div class="songname">
+          <span class="songname-title">
+            <img src="img/12.jpg" alt="">
+            <a href="">单车</a>
+          </span>
+          <span class="icon">
+           <a href="" class="mv"></a>
+           <a href=""></a>
+          </span>
+         
+        </div>
+        <div id="menu">
+          <a href="" class="m-play"></a>
+          <a href="" class="m-add"></a>
+        </div>
+        <div id="author">
+         <span>陈奕迅</span>
+        </div>
+        <div id="time">
+          03:15
+        </div>
+        </li>
+        <li>
+          <div class="songlist-number hot"></div>
+          <div class="songlist-rank">
+            <span></span>
+            <p> 151%</p>
+           
+          </div>
+          <div class="songname">
+            <span class="songname-title">
+              <img src="img/12.jpg" alt="">
+              <a href="">单车</a>
+            </span>
+            <span class="icon">
+             <a href="" class="mv"></a>
+             <a href=""></a>
+            </span>
+           
+          </div>
+          <div id="menu">
+            <a href="" class="m-play"></a>
+            <a href="" class="m-add"></a>
+          </div>
+          <div id="author">
+           <span>陈奕迅</span>
+          </div>
+          <div id="time">
+            03:15
+          </div>
+          </li>
+          <li>
+            <div class="songlist-number hot"></div>
+            <div class="songlist-rank">
+              <span></span>
+              <p> 151%</p>
+             
+            </div>
+            <div class="songname">
+              <span class="songname-title">
+                <img src="img/12.jpg" alt="">
+                <a href="">单车</a>
+              </span>
+              <span class="icon">
+               <a href="" class="mv"></a>
+               <a href=""></a>
+              </span>
+             
+            </div>
+            <div id="menu">
+              <a href="" class="m-play"></a>
+              <a href="" class="m-add"></a>
+            </div>
+            <div id="author">
+             <span>陈奕迅</span>
+            </div>
+            <div id="time">
+              03:15
+            </div>
+            </li>
+            <li>
+              <div class="songlist-number hot"></div>
+              <div class="songlist-rank">
+                <span></span>
+                <p> 151%</p>
+               
+              </div>
+              <div class="songname">
+                <span class="songname-title">
+                  <img src="img/12.jpg" alt="">
+                  <a href="">陪你度过漫长岁月</a>
+                </span>
+                <span class="icon">
+                 <a href="" class="mv"></a>
+                 <a href=""></a>
+                </span>
+               
+              </div>
+              <div id="menu">
+                <a href="" class="m-play"></a>
+                <a href="" class="m-add"></a>
+              </div>
+              <div id="author">
+               <span>陈奕迅</span>
+              </div>
+              <div id="time">
+                03:15
+              </div>
+              </li>
+              <li>
+                <div class="songlist-number hot"></div>
+                <div class="songlist-rank">
+                  <span></span>
+                  <p> 151%</p>
+                 
+                </div>
+                <div class="songname">
+                  <span class="songname-title">
+                    <img src="img/12.jpg" alt="">
+                    <a href="">单车</a>
+                  </span>
+                  <span class="icon">
+                   <a href="" class="mv"></a>
+                   <a href=""></a>
+                  </span>
+                 
+                </div>
+                <div id="menu">
+                  <a href="" class="m-play"></a>
+                  <a href="" class="m-add"></a>
+                </div>
+                <div id="author">
+                 <span>陈奕迅</span>
+                </div>
+                <div id="time">
+                  03:15
+                </div>
+                </li>
+                <li>
+                  <div class="songlist-number hot"></div>
+                  <div class="songlist-rank">
+                    <span></span>
+                    <p> 151%</p>
+                   
+                  </div>
+                  <div class="songname">
+                    <span class="songname-title">
+                      <img src="img/12.jpg" alt="">
+                      <a href="">单车</a>
+                    </span>
+                    <span class="icon">
+                     <a href="" class="mv"></a>
+                     <a href=""></a>
+                    </span>
+                   
+                  </div>
+                  <div id="menu">
+                    <a href="" class="m-play"></a>
+                    <a href="" class="m-add"></a>
+                  </div>
+                  <div id="author">
+                   <span>陈奕迅</span>
+                  </div>
+                  <div id="time">
+                    03:15
+                  </div>
+                  </li>
+                  <li>
+                    <div class="songlist-number hot"></div>
+                    <div class="songlist-rank">
+                      <span></span>
+                      <p> 151%</p>
+                     
+                    </div>
+                    <div class="songname">
+                      <span class="songname-title">
+                        <img src="img/12.jpg" alt="">
+                        <a href="">单车</a>
+                      </span>
+                      <span class="icon">
+                       <a href="" class="mv"></a>
+                       <a href=""></a>
+                      </span>
+                     
+                    </div>
+                    <div id="menu">
+                      <a href="" class="m-play"></a>
+                      <a href="" class="m-add"></a>
+                    </div>
+                    <div id="author">
+                     <span>陈奕迅</span>
+                    </div>
+                    <div id="time">
+                      03:15
+                    </div>
+                    </li>
+                    <li>
+                      <div class="songlist-number hot"></div>
+                      <div class="songlist-rank">
+                        <span></span>
+                        <p> 151%</p>
+                       
+                      </div>
+                      <div class="songname">
+                        <span class="songname-title">
+                          <img src="img/12.jpg" alt="">
+                          <a href="">单车</a>
+                        </span>
+                        <span class="icon">
+                         <a href="" class="mv"></a>
+                         <a href=""></a>
+                        </span>
+                       
+                      </div>
+                      <div id="menu">
+                        <a href="" class="m-play"></a>
+                        <a href="" class="m-add"></a>
+                      </div>
+                      <div id="author">
+                       <span>陈奕迅</span>
+                      </div>
+                      <div id="time">
+                        03:15
+                      </div>
+                      </li>
+                      <li>
+                        <div class="songlist-number hot"></div>
+                        <div class="songlist-rank">
+                          <span></span>
+                          <p> 151%</p>
+                         
+                        </div>
+                        <div class="songname">
+                          <span class="songname-title">
+                            <img src="img/12.jpg" alt="">
+                            <a href="">单车</a>
+                          </span>
+                          <span class="icon">
+                           <a href="" class="mv"></a>
+                           <a href=""></a>
+                          </span>
+                         
+                        </div>
+                        <div id="menu">
+                          <a href="" class="m-play"></a>
+                          <a href="" class="m-add"></a>
+                        </div>
+                        <div id="author">
+                         <span>陈奕迅</span>
+                        </div>
+                        <div id="time">
+                          03:15
+                        </div>
+                        </li>
+                        <li>
+                                    <div class="songlist-number hot"></div>
+                                    <div class="songlist-rank">
+                                      <span></span>
+                                      <p> 151%</p>
+                                     
+                                    </div>
+                                    <div class="songname">
+                                      <span class="songname-title">
+                                        <img  src="img/12.jpg" alt="">
+                                        <a href="">单车</a>
+                                      </span>
+                                      <span class="icon">
+                                       <a href="" class="mv"></a>
+                                       <a href=""></a>
+                                      </span>
+                                     
+                                    </div>
+                                    <div id="menu">
+                                      <a href="" class="m-play"></a>
+                                      <a href="" class="m-add"></a>
+                                    </div>
+                                    <div id="author">
+                                     <span>陈奕迅</span>
+                                    </div>
+                                    <div id="time">
+                                      03:15
+                                    </div>
+                          </li>
+          </ul>
+        </div>
+      </div>
+      <div style="clear:both"></div>   
+      <div class="pl">
+        <h4>评论</h4>
+        <h5>共99999条评论</h5>
+        <div style="clear: both"></div>
+        <textarea maxlength="300" @input="monitorInput" v-model="textareaContent" name="" id="" cols="30" rows="10" placeholder="说说你的看法吧" >
+        </textarea> 
+        <span>剩余<i>{{num}}</i>字</span>
+        <i></i>
+        <input type="button" value="发表评论">
+      </div>
+    </div>
+    <!-- 排行榜模块end -->   
+    <!--返回顶部模块start-->
+    <div style="clear: both"></div>
+    <div class="top"></div>
+    <!--返回顶部模块end-->
+    <!--footer模块start-->
+    <div class="footer">
+      <div class="fh">
+          <div class="copyright">
+              <img src="img/logo.png" class="l1">
+              <div style="clear: both"></div>
+              <p>QQ音乐官网 <br>
+                  ©2022-2060 &nbsp;技术支持：Emerson
+              </p>
+              <a href="#" class="song">下载客户端</a>
+            </div>
+          <div class="links" >
+              <dl>
+                  <dt>关于QQ音乐官网</dt>
+                  <dd><a href="#">关于</a></dd>
+                  <dd><a href="#">管理团队</a></dd>
+                  <dd><a href="#">帮助</a></dd>
+              </dl>
+          </div>
+      </div>
+  </div>
+<!--footer模块end-->
+  </body>
+</html>

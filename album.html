@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>专辑</title>
+    <link rel="icon" href="img/音乐.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/1c.css" />
+    <link rel="stylesheet" href="CSS/2c.css" />
+    <script src="JS/jquery-3.6.0.js"></script>
+    <script src="JS/ejs2.js"></script> 
+    <script src="JS/album.js"></script>
+   
+  </head>
+  <body>
+    <!--头部模块s-->
+    <div class="h">
+      <div class="nav">
+        <img src="img/logo.png" alt="" class="l1" />
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="rank.html">排行榜</a></li>
+          <li><a href="#">歌迷相关</a></li>
+        </ul>
+        <div class="search">
+          <input type="text" value="输入关键词" />
+          <button class="search-button"></button>
+          <div class="slist">
+            <ol>
+                <li>
+                <a href="" class="number">1</a>
+                 淘汰
+                 <span> 99.9万</span> 
+               
+                </li>
+                <li>
+                  <a href="" class="number">2</a>
+                   单车
+                   <span> 88.8万</span> 
+                 
+                  </li>
+                  <li>
+                      <a href="" class="number">3</a>
+                    十年
+                       <span> 77.7万</span> 
+                     
+                      </li>
+                      <li>
+                          <a href="" class="number">4</a>
+                           阴天快乐
+                           <span> 66.6万</span> 
+                         
+                          </li>
+                          <li>
+                              <a href="" class="number">5</a>
+                               白玫瑰
+                               <span> 55.5万</span> 
+                             
+                              </li>
+            </ol>
+           </div>
+        </div>
+      </div>
+      <div class="user">
+        <img src="img/head.jpg" alt="">
+        <span class="un">Ht-1874</span>
+        <img id="login" src="img/login_qq.png" alt="">
+
+      </div>
+      <!-- 登出模块start -->
+    <div class="logout">
+      <img  id="logout-img" src="img/head.jpg" alt="">
+      <img id="login" src="img/login_qq.png" alt="">
+      <img class="level" src="img/svip6.png" alt="">
+      <img  class="level2" src="img/sui6.png" alt="">
+
+       <span>Ht-1874</span>
+       <div>
+           <h4>绿钻豪华版</h4>
+           <button class="btn">续费</button>
+       </div>
+         <p>2060-3-23 到期</p>
+         <a href="login.html" id="lout"> <h4>退出登录</h4></a>
+       <!-- 登出模块end -->
+    </div>
+    </div>
+    <!--头部模块e-->
+
+    <div style="clear: both"></div>
+    <!--专辑轮播图模块start-->
+    <div class="alb-banner">
+      <div class="alb-sub-banner">
+        <ul class="u1">
+         
+          <li class="sub-banner-l1">
+            <a href=""><img src="img/alb1.jpg" alt="" class="alp" /></a>
+
+          </li>
+          <li class="sub-banner-l1">
+            <a href=""><img src="img/alb2.jpg" alt="" class="alp" /></a>
+          </li>
+          <li class="sub-banner-l1">
+            <a href=""><img src="img/alb3.jpg" alt="" class="alp" /></a>
+          </li>
+          <li class="sub-banner-l1">
+            <a href=""><img src="img/alb4.jpg" alt="" class="alp" /></a>
+          </li>
+          <li class="sub-banner-l1">
+            <a href=""><img src="img/alb5.jpg" alt="" class="alp" /></a>
+          </li>
+          <li class="sub-banner-l1">
+            <a href=""><img src="img/alb6.jpg" alt="" class="alp" /></a>
+          </li>
+          
+        </ul>
+      </div>
+      <ul class="u2">
+      </ul>
+      <div class="prve"><span></span></div>
+      <div class="next"><span></span></div>
+    </div>
+    <!--专辑轮播图模块end-->
+
+    <!---最新上架模块start-->
+    <div class="new-album h">
+      <h2>最新上架</h2>
+      <ul>
+        <li>
+          <div class="album-cover">
+
+            <div class="cover-box">
+              <a href=""><img src="img/cover.jpg" alt="" id="cover-img"></a>
+            <span class="cover-play"></span>
+             </div>
+            <a href="">陈奕迅48首选</a>
+            <div class="purchase">
+              ¥ 48
+              <button>立即购买</button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="album-cover">
+            <div class="cover-box">
+              <a href=""><img src="img/cover1.jpg" alt="" id="cover-img"></a>
+              <span class="cover-play"></span>
+
+             </div>
+            <a href="">孤勇者</a>
+            <div class="purchase">
+              ¥ 2
+              <button>立即购买</button>
+          </div>
+          </div>
+        </li>
+        <li>
+          <div class="album-cover">
+            <div class="cover-box">
+              <a href=""><img src="img/cover2.jpg" alt="" id="cover-img"></a>
+              <span class="cover-play"></span>
+
+             </div>
+            <a href="">L.O.V.E.</a>
+            <div class="purchase">
+              ¥ 20
+              <button>立即购买</button>
+          </div>
+        </div>
+        </li>
+        <li>
+          <div class="album-cover">
+            <div class="cover-box">
+           <a href=""><img src="img/cover3.jpg" alt="" id="cover-img"></a>
+           <span class="cover-play"></span>
+
+          </div>
+            <a href="">H3M</a>
+            <div class="purchase">
+              ¥ 20
+              <button>立即购买</button>
+          </div>
+        </div>
+        </li>
+        <li>
+          <div class="album-cover">
+            <div class="cover-box">
+              <a href=""><img src="img/cover4.jpg" alt="" id="cover-img"></a>
+              <span class="cover-play"></span>
+
+             </div>
+            <a href="">七</a>
+            <div class="purchase">
+              ¥ 20
+              <button>立即购买</button>
+          </div>
+        </div>
+        </li>
+      </ul>
+    </div>
+      <!---最新上架模块end-->
+
+      <!-- 本周热销start -->
+      <div class="new-album h">
+        <h2>本周热销</h2>
+        <ul>
+          <li>
+            <div class="album-cover">
+  
+              <div class="cover-box">
+                <a href=""><img src="img/12.jpg" alt="" id="cover-img"></a>
+              <span class="cover-play"></span>
+               </div>
+              <a href="">Shall We Dance? Shall We Talk!</a>
+              <div class="purchase">
+                ¥ 24
+                <button>立即购买</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="album-cover">
+              <div class="cover-box">
+                <a href=""><img src="img/2.jpg" alt="" id="cover-img"></a>
+                <span class="cover-play"></span>
+  
+               </div>
+              <a href="">Special Thanks To...</a>
+              <div class="purchase">
+                ¥ 22
+                <button>立即购买</button>
+            </div>
+            </div>
+          </li>
+          <li>
+            <div class="album-cover">
+              <div class="cover-box">
+                <a href=""><img src="img/hot.jpg" alt="" id="cover-img"></a>
+                <span class="cover-play"></span>
+  
+               </div>
+              <a href="">海胆 & 谁来剪月光</a>
+              <div class="purchase">
+                ¥ 20
+                <button>立即购买</button>
+            </div>
+          </div>
+          </li>
+          <li>
+            <div class="album-cover">
+              <div class="cover-box">
+             <a href=""><img src="img/6.jpg" alt="" id="cover-img"></a>
+             <span class="cover-play"></span>
+  
+            </div>
+              <a href="">认了吧</a>
+              <div class="purchase">
+                ¥ 20
+                <button>立即购买</button>
+            </div>
+          </div>
+          </li>
+          <li>
+            <div class="album-cover">
+              <div class="cover-box">
+                <a href=""><img src="img/hot1.jpg" alt="" id="cover-img"></a>
+                <span class="cover-play"></span>
+  
+               </div>
+              <a href="">The Key</a>
+              <div class="purchase">
+                ¥ 26
+                <button>立即购买</button>
+            </div>
+          </div>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- 本周热销end -->
+
+      <!-- 排行榜模 -->
+      <div class="rank">
+        <h3>排行榜</h3>
+        <a href="rank.html" class="more">更多></a></a>
+         <ul>
+           <li class="hsong">
+             <a href="#">
+              <img src="img/bg0.jpg" alt="" class="small">
+              <img src="img/bg-big1.png" alt="" class="big">
+             </a>
+           </li>
+           <li class="newsong">
+            <a href="#">
+              <img src="img/bg1.jpg"" class="small">
+              <img src="img/bg-big2.png" alt="" class="big">
+            </a>
+           </li>
+           <li class="popsong">
+            <a href="#">
+              <img src="img/bg2.jpg" alt="" class="small">
+              <img src="img/bg-big3.png" alt="" class="big">
+            </a>
+           </li>
+           <li class="ea">
+            <a href="#">
+              <img src="img/bg3.jpg" alt="" class="small">
+              <img src="img/bg-big4.png" alt="" class="big">
+            </a>
+           </li>
+           <li class="kr">
+            <a href="#">
+              <img src="img/bg4.jpg" alt="" class="small">
+              <img src="img/bg-big5.png" alt="" class="big">
+            </a>
+           </li>
+         </ul>
+      </div>
+       <!-- 排行榜模 -->
+      <!--返回顶部模块start-->
+<div style="clear: both"></div>
+<div class="top">   </div>
+<!--返回顶部模块end-->
+      <!--footer模块start-->
+      <div class="footer">
+        <div class="fh">
+            <div class="copyright">
+                <img src="img/logo.png" class="l1">
+                <div style="clear: both"></div>
+                <p>QQ音乐官网 <br>
+                    ©2022-2060 &nbsp;技术支持：Emerson
+                </p>
+                <a href="#" class="song">下载客户端</a>
+            </div>
+            <div class="links" >
+                <dl>
+                    <dt>关于QQ音乐官网</dt>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">管理团队</a></dd>
+                    <dd><a href="#">帮助</a></dd>
+    
+    
+                </dl>
+            </div>
+        </div>
+    </div>
+<!--footer模块end-->
+
+  </body>
+  
+ 
+</html>
