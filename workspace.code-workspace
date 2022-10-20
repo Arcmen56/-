@@ -1,0 +1,17 @@
+{
+  "folders": [
+	{
+		"path": "..\\我的网页"
+	},
+	{
+		"path": "..\\jQuery上机"
+	},
+	{
+		"path": "."
+	}
+],
+
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "jQuery课设"
+  }
+}
